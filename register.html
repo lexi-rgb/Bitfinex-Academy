@@ -6,48 +6,77 @@
     <title>Register - Bitfinex Forex Academy</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background: linear-gradient(to bottom right, #004d7a, #00b4db);
+            color: #fff;
         }
-        header, nav {
+        header {
             text-align: center;
-            background: #004d7a;
-            color: white;
-            padding: 20px;
+            padding: 30px;
+            background: linear-gradient(to right, #004d7a, #00b4db);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
+        header h1 {
+            margin: 0;
+            color: #fff;
         }
-        section {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
+        nav {
+            text-align: center;
+            background: #005f99;
+            padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background: #004d7a;
-            color: white;
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
-        .payment-option {
-            font-size: 1.2rem;
-            text-align: center;
-            color: #004d7a;
-            margin: 20px 0;
+        nav a:hover {
+            color: #00b4db;
+        }
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         iframe {
             width: 100%;
             height: 1200px;
-            border: 0;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .whatsapp-link {
+            display: block;
+            background: #25d366;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 300px;
+            transition: background 0.3s ease;
+        }
+        .whatsapp-link:hover {
+            background: #1a9d57;
+        }
+        footer {
+            text-align: center;
+            background: #003b5c;
+            padding: 20px;
+            margin-top: 30px;
+            color: #fff;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -64,21 +93,14 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<!-- Payment Option at the Top -->
-<div id="payment-option" class="payment-option">
-    <p>Click <a href="payment.html" style="color: #004d7a;">here</a> to make payment.</p>
-</div>
+<section>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJJdk_cOmVhcQ8z5K16t36HXL3RQDj3gAGnUCqHGvLQ6aX1w/viewform?usp=dialog"
+        title="Registration Form"></iframe>
 
-<!-- Embed Google Form for Registration -->
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJJdk_cOmVhcQ8z5K16t36HXL3RQDj3gAGnUCqHGvLQ6aX1w/viewform?usp=dialog" 
-        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-
-<!-- Send Payment Receipt via WhatsApp -->
-<div class="payment-option">
     <a href="https://wa.me/2349011102945" class="whatsapp-link" target="_blank">
         Send Payment Proof via WhatsApp
     </a>
-</div>
+</section>
 
 <footer>
     <p>&copy; 2025 Bitfinex Forex Academy. All rights reserved.</p>
