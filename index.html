@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Bitfinex Forex Academy</title>
+    <title>Bitfinex Forex Academy</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, nav {
+            text-align: center;
             background: #004d7a;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
         }
         .container {
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            padding: 40px;
+        }
+        .ad-container {
+            background: #ff9800;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
         }
         h1 {
             font-size: 3rem;
-            margin: 0;
-            animation: textReveal 3s ease-in-out;
-            opacity: 0;
+            margin-bottom: 20px;
         }
         p {
-            margin: 20px 0;
             font-size: 1.2rem;
-            opacity: 0;
-            animation: textReveal 3s ease-in-out 1s;
+            margin: 10px 0;
         }
         button {
             padding: 15px 30px;
@@ -41,37 +49,45 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            opacity: 1; /* Ensures button stays visible */
         }
         button:hover {
             background: #e68900;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes textReveal {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Welcome to Bitfinex Forex Academy</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="payment.html">Payment</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
 <div class="container">
+    <!-- Advertisement Section -->
+    <div class="ad-container">
+        <h2>🚀 Join the BITFINEX TRADING ACADEMY! 🚀</h2>
+        <p>Ready to master the art of trading? Get hands-on experience in a 4-month intensive course starting March 5th, 2025. Whether you're a beginner or looking to sharpen your skills, this course is designed to take your trading to the next level.</p>
+        <p><strong>For just $10, you'll gain:</strong></p>
+        <ul style="list-style-type: none; padding: 0;">
+            <li><strong>In-depth lessons on Forex and cryptocurrency trading</strong></li>
+            <li><strong>Real-time trading strategies and market analysis</strong></li>
+            <li><strong>Exclusive access to expert trainers</strong></li>
+        </ul>
+        <p><strong>Don't miss out! Secure your spot today!</strong></p>
+        <button onclick="window.location.href='register.html'">Register Now</button>
+        <p><a href="features.html" style="color: #004d7a;">Learn more about the class</a></p>
+    </div>
+
+    <!-- Main Page Heading -->
     <h1>Welcome to Bitfinex Forex Academy</h1>
     <p>Educate. Explore. Empower.</p>
-    <button onclick="window.location.href='main.html'">Proceed</button>
+    <button onclick="window.location.href='register.html'">Proceed</button>
 </div>
 
 </body>
