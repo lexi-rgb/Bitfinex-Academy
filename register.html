@@ -70,6 +70,12 @@
         .whatsapp-link:hover {
             background: #1a9d57;
         }
+        .payment-option {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #004d7a;
+            margin: 20px 0;
+        }
         footer {
             text-align: center;
             background: #003b5c;
@@ -94,6 +100,10 @@
 </nav>
 
 <section>
+    <div id="payment-option" class="payment-option">
+        <p>Click <a href="payment.html" style="color: #004d7a;">here</a> to make payment.</p>
+    </div>
+
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJJdk_cOmVhcQ8z5K16t36HXL3RQDj3gAGnUCqHGvLQ6aX1w/viewform?usp=dialog"
         title="Registration Form"></iframe>
 
@@ -105,6 +115,20 @@
 <footer>
     <p>&copy; 2025 Bitfinex Forex Academy. All rights reserved.</p>
 </footer>
+
+<script>
+    // Hide payment option after form submission
+    function hidePaymentOption() {
+        document.getElementById("payment-option").style.display = "none";
+    }
+
+    // Add event listener to iframe for submission
+    window.addEventListener("message", function(event) {
+        if (event.origin === "https://docs.google.com" && event.data === "submitted") {
+            hidePaymentOption(); // Hide payment link once form is submitted
+        }
+    });
+</script>
 
 </body>
 </html>
