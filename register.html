@@ -23,40 +23,20 @@
             margin: 0 10px;
             text-decoration: none;
         }
-        form {
-            max-width: 600px;
-            margin: 40px auto;
-            background: #fff;
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
             padding: 20px;
+            background: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        input, button {
-            width: 100%;
-            margin: 10px 0;
+        footer {
+            text-align: center;
+            margin-top: 20px;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
             background: #004d7a;
             color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #003b5c;
-        }
-        .verified {
-            font-size: 3rem;
-            color: green;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .message {
-            font-size: 1.5rem;
-            text-align: center;
-            color: #333;
-            margin: 20px 0;
         }
         .payment-option {
             font-size: 1.2rem;
@@ -64,21 +44,10 @@
             color: #004d7a;
             margin: 20px 0;
         }
-        .whatsapp-link {
-            display: block;
-            background-color: #25d366;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .whatsapp-link:hover {
-            background-color: #128c7e;
-        }
-        .hidden {
-            display: none;
+        iframe {
+            width: 100%;
+            height: 1200px;
+            border: 0;
         }
     </style>
 </head>
@@ -100,16 +69,9 @@
     <p>Click <a href="payment.html" style="color: #004d7a;">here</a> to make payment.</p>
 </div>
 
-<form id="registration-form" onsubmit="showConfirmation(event)" method="POST" enctype="multipart/form-data">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
-    <label for="receipt">Upload Payment Receipt:</label>
-    <input type="file" name="receipt" id="receipt" required>
-    <input type="checkbox" name="terms" required> I agree to the terms and conditions.
-    <button type="submit">Submit Registration</button>
-</form>
+<!-- Embed Google Form for Registration -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLg-ynRS6u2qm__8Zzs7mVP0WElUIT2XcvkK6DY-CLRUDQEA/viewform?usp=pp_url" 
+        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 <!-- Confirmation message (hidden by default) -->
 <div id="confirmation" class="hidden">
@@ -127,13 +89,15 @@
 </div>
 
 <script>
-    function showConfirmation(event) {
-        event.preventDefault(); // Prevent form submission
-        document.getElementById("registration-form").classList.add("hidden");
-        document.getElementById("confirmation").classList.remove("hidden");
-        document.getElementById("payment-option").classList.add("hidden"); // Hide the payment link after registration
+    // Hide payment link after registration
+    function showConfirmation() {
+        document.getElementById("payment-option").classList.add("hidden"); // Hide the payment option
     }
 </script>
+
+<footer>
+    <p>&copy; 2025 Bitfinex Forex Academy. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
