@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bitfinex Forex Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, nav {
+            text-align: center;
+            background: #004d7a;
+            color: white;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #004d7a;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #003b5c;
+        }
+        .verified {
+            font-size: 3rem;
+            color: green;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .message {
+            font-size: 1.5rem;
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+        .payment-note {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #004d7a;
+            margin: 20px 0;
+        }
+        .whatsapp-link {
+            display: block;
+            background-color: #25d366;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .whatsapp-link:hover {
+            background-color: #128c7e;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Register for the Class</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="payment.html">Payment</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<form id="registration-form" onsubmit="showConfirmation(event)">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
+    <label for="receipt">Upload Payment Receipt:</label>
+    <input type="file" name="receipt" id="receipt" required>
+    <input type="checkbox" name="terms" required> I agree to the terms and conditions.
+    <button type="submit">Submit Registration</button>
+</form>
+
+<!-- Confirmation message (hidden by default) -->
+<div id="confirmation" class="hidden">
+    <div class="verified">✔</div>
+    <div class="message">
+        Registration complete! Check your email for further instructions.
+    </div>
+    <div class="payment-note">
+        <p>Click <a href="payment.html" style="color: #004d7a;">here</a> to make payment.</p>
+    </div>
+    <a href="https://wa.me/2349011102945" class="whatsapp-link" target="_blank">
+        Send Payment Receipt via WhatsApp
+    </a>
+</div>
+
+<script>
+    function showConfirmation(event) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("registration-form").classList.add("hidden");
+        document.getElementById("confirmation").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
