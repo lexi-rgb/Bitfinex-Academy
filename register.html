@@ -95,7 +95,12 @@
     <a href="contact.html">Contact</a>
 </nav>
 
-<form id="registration-form" onsubmit="showConfirmation(event)">
+<!-- Payment link above the form -->
+<div class="payment-note">
+    <p>Click <a href="payment.html" style="color: #004d7a;">here</a> to make payment.</p>
+</div>
+
+<form id="registration-form" onsubmit="showConfirmation(event)" method="POST" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -112,9 +117,10 @@
     <div class="message">
         Registration complete! Check your email for further instructions.
     </div>
-    <div class="payment-note">
-        <p>Click <a href="payment.html" style="color: #004d7a;">here</a> to make payment.</p>
-    </div>
+</div>
+
+<!-- Second option to send payment receipt via WhatsApp (under the form) -->
+<div class="payment-option">
     <a href="https://wa.me/2349011102945" class="whatsapp-link" target="_blank">
         Send Payment Receipt via WhatsApp
     </a>
