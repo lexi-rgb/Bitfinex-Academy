@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bitfinex Forex Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, nav {
+            text-align: center;
+            background: #004d7a;
+            color: white;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #004d7a;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #003b5c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Register for the Class</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="payment.html">Payment</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <form action="mailto:Idokoocheelijah56@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="tel" name="whatsapp" placeholder="WhatsApp Number" required>
+        <label for="receipt">Upload Payment Receipt:</label>
+        <input type="file" name="receipt" id="receipt" required>
+        <input type="checkbox" name="terms" required> I agree to the terms and conditions.
+        <button type="submit">Submit Registration</button>
+    </form>
+</body>
+</html>
