@@ -61,6 +61,18 @@
             background: #004d7a;
             color: white;
         }
+        button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #004d7a;
+            background: #ff9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e68900;
+        }
     </style>
 </head>
 <body>
@@ -69,21 +81,13 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
         <a href="register.html">Register</a>
+        <a href="payment.html">Payment</a>
         <a href="contact.html">Contact</a>
     </nav>
     <section>
         <h2>Payment Options</h2>
         <p>Please choose one of the payment methods below to complete your registration:</p>
-
-        <!-- Bank Transfer -->
-        <div class="payment-method">
-            <h3>Bank Transfer</h3>
-            <p><strong>Bank Name:</strong> Opay/Paycom</p>
-            <p><strong>Account Name:</strong> Elijah Oche Idoko</p>
-            <p><strong>Account Number:</strong> 8108374851</p>
-        </div>
 
         <!-- Bitcoin -->
         <div class="payment-method">
@@ -97,13 +101,22 @@
             <p><strong>Wallet Address:</strong> 0xC238AaCa7322Ce5261b3cD9fD0eD8F451709EfC7</p>
         </div>
 
+        <!-- Payment Button -->
+        <button onclick="payWithPaystack()">Proceed with Paystack Payment</button>
+
         <!-- Note -->
         <div class="note">
-            <p><strong>Note:</strong> Make payment and attach payment proof on the <a href="register.html">registration page</a>.</p>
+            <p><strong>Note:</strong> After completing payment, please return here to submit proof of payment on the <a href="register.html">registration page</a>.</p>
         </div>
     </section>
     <footer>
         <p>&copy; 2025 Bitfinex Forex Academy. All rights reserved.</p>
     </footer>
+
+    <script>
+        function payWithPaystack() {
+            window.location.href = "https://paystack.com/pay/3lhzmxk41d";
+        }
+    </script>
 </body>
 </html>
