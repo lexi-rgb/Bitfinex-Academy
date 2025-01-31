@@ -115,11 +115,8 @@
 
     <script>
         function payWithPaystack() {
-            // Generate a unique reference for the transaction
-            const reference = 'bitfinex-academy-' + Math.floor(Math.random() * 1000000000); // example reference format
-
-            // Make a Paystack payment request
-            window.location.href = "https://paystack.com/pay/3lhzmxk41d?reference=" + reference;
+            var reference = "unique_reference_" + new Date().getTime(); // Example reference generation
+            window.location.href = "https://bitfinexacademy.ct.ws/payment_status.php?reference=" + reference;
         }
     </script>
 </body>
