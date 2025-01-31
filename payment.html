@@ -5,7 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment - Bitfinex Trading Academy</title>
     <style>
-        /* Your existing styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, nav {
+            text-align: center;
+            background: #004d7a;
+            color: white;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #004d7a;
+        }
+        .payment-method {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f1f1f1;
+            border-left: 5px solid #004d7a;
+            border-radius: 5px;
+        }
+        .payment-method p {
+            margin: 5px 0;
+        }
+        .payment-method strong {
+            color: #004d7a;
+        }
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff8d4;
+            border-left: 5px solid #ffcc00;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #004d7a;
+            color: white;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #004d7a;
+            background: #ff9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e68900;
+        }
     </style>
 </head>
 <body>
@@ -34,7 +101,7 @@
             <p><strong>Wallet Address:</strong> 0xC238AaCa7322Ce5261b3cD9fD0eD8F451709EfC7</p>
         </div>
 
-        <!-- Paystack Button -->
+        <!-- Payment Button -->
         <button onclick="payWithPaystack()">Proceed with Paystack Payment</button>
 
         <!-- Note -->
@@ -48,13 +115,11 @@
 
     <script>
         function payWithPaystack() {
-            var email = 'user@example.com'; // Replace with the actual user's email dynamically if available
-            var amount = 1000; // Replace with the actual amount for the class registration
+            // Generate a unique reference for the transaction
+            const reference = 'bitfinex-academy-' + Math.floor(Math.random() * 1000000000); // example reference format
 
-            var paystackUrl = 'https://paystack.com/pay/3lhzmxk41d?email=' + email + '&amount=' + amount;
-
-            // Redirect user to Paystack payment page
-            window.location.href = paystackUrl;
+            // Make a Paystack payment request
+            window.location.href = "https://paystack.com/pay/3lhzmxk41d?reference=" + reference;
         }
     </script>
 </body>
