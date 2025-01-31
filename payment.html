@@ -101,7 +101,7 @@
             <p><strong>Wallet Address:</strong> 0xC238AaCa7322Ce5261b3cD9fD0eD8F451709EfC7</p>
         </div>
 
-        <!-- Payment Button -->
+        <!-- Paystack Payment Button -->
         <button onclick="payWithPaystack()">Proceed with Paystack Payment</button>
 
         <!-- Note -->
@@ -115,8 +115,10 @@
 
     <script>
         function payWithPaystack() {
-            var reference = "unique_reference_" + new Date().getTime(); // Example reference generation
-            window.location.href = "https://bitfinexacademy.ct.ws/payment_status.php?reference=" + reference;
+            // Generate a unique reference for the transaction
+            var reference = "unique_reference_" + new Date().getTime(); // You can change this logic
+            // Redirect to verify-payment.php with reference as a parameter
+            window.location.href = "https://bitfinexacademy.ct.ws/verify-payment.php?reference=" + reference;
         }
     </script>
 </body>
